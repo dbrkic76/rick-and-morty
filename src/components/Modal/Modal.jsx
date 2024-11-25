@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -17,11 +17,12 @@ const style = {
 };
 
 export default function BasicModal({ episodeUrl }) {
-  const [open, setOpen] = React.useState(false);
-  const [episode, setEpisode] = React.useState(null);
+  const [open, setOpen] = useState(false);
+  const [episode, setEpisode] = useState(null);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  React.useEffect(() => {
+
+  useEffect(() => {
     fetch(episodeUrl)
       .then((res) => res.json())
       .then((data) => setEpisode(data));
@@ -41,7 +42,7 @@ export default function BasicModal({ episodeUrl }) {
             {episode?.name}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {episode?.characters.map((e) => {
+            {episode?.characters?.map((e) => {
               return <p>{e}</p>;
             })}
           </Typography>

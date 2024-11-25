@@ -2,20 +2,23 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
   min-height: 100vh;
-  background-image: url(https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24415978/rick_and_morty_s4_image.png?quality=90&strip=all&crop=0,3.4613147178592,100,93.077370564282);
+  background-image: url("https://m.media-amazon.com/images/M/MV5BMzU1MzAyNzUtY2FlZi00YTg1LTg2OGQtZjZjYzg3YWVlNGMyXkEyXkFqcGdeQW1yb2Njbw@@._V1_.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
+
 .cards-wrapper {
   background-color: whitesmoke;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 15px;
+  gap: 8px;
   width: 70%;
   height: 80vh;
   overflow-y: scroll;
@@ -23,17 +26,19 @@ body {
   padding: 20px;
   border-radius: 15px;
 }
+
 .card {
-  border: 1px solid black;
+  border: 1px solid orange;
   border-radius: 8px;
-  /* padding: 8px; */
-  overflow: hidden;
+  padding: 8px;
 }
+
 .card h3 {
   text-align: center;
   color: green;
   font-size: 22px;
 }
+
 .card button {
   width: 100%;
   border: none;
@@ -42,6 +47,7 @@ body {
   border-radius: 8px;
   padding: 6px 0;
 }
+
 .single-page {
   height: 100vh;
   display: flex;
@@ -49,15 +55,29 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .episodes {
   display: flex;
   flex-direction: column;
   max-height: 400px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
+
 .episodes > p {
   margin: 10px 0;
   font-size: 24px;
   color: blue;
   cursor: pointer;
+}
+
+.pagination {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > button {
+  padding: 10px;
+  text-align: center;
 }
