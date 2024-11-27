@@ -81,3 +81,7 @@ body {
   padding: 10px;
   text-align: center;
 }
+.active-page {
+  background-color: green;
+  color: white;
+}

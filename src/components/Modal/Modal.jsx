@@ -26,7 +26,7 @@ export default function BasicModal({ episodeUrl }) {
     fetch(episodeUrl)
       .then((res) => res.json())
       .then((data) => setEpisode(data));
-  }, []);
+  }, [episodeUrl]);
 
   return (
     <div>
